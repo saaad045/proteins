@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureFuel Benefits | Plant-Based Wellness</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; justify-content: center; align-items: center;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">PureFuel</a>
+            <button class="navbar-toggler" type="button" id="mobileMenuButton" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="benefits.html">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="product.html">Shop Now</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="navbar-icons">
+                            <a class="user-icon" href="#" data-bs-toggle="modal" data-bs-target="#emailModal">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <a class="cart-icon" href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">3</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div class="sidebar d-lg-none" id="mobileSidebar">
+        <div class="sidebar-header d-flex justify-content-between align-items-center px-3 py-3">
+            <a class="navbar-brand fw-bold text-white" href="index.html">PureFuel</a>
+            <button class="btn-close btn-close-white" id="closeSidebar" aria-label="Close"></button>
+        </div>
+        <ul class="navbar-nav flex-column px-3">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active text-white" href="benefits.html">Benefits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#about">About</a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="btn btn-primary w-100 mb-3" href="product.html">Shop Now</a>
+            </li>
+            <li class="nav-item d-flex justify-content-center gap-3">
+                <a class="user-icon" href="#" data-bs-toggle="modal" data-bs-target="#emailModal">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a class="cart-icon" href="#cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay d-lg-none"></div>
+
+       <!--POpUP-->
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign In / Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="emailForm">
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="userEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Continue</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="small text-muted">We'll send you a magic link to sign in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Hero Section -->
+    <section class="benefits-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 benefits-hero-content" data-aos="fade-right">
+                    <span class="benefit-highlight">Premium Quality</span>
+                    <h1>Experience the PureFuel Difference</h1>
+                    <p class="lead">Discover how our plant-based protein can transform your health and wellness journey
+                        with scientifically-backed benefits.</p>
+                    <a href="product.html" class="btn btn-primary btn-lg">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid Section -->
+    <section class="benefits-grid">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="mb-3">Key Benefits of PureFuel</h2>
+                <p class="text-muted">Why our plant-based protein stands out</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>100% Plant-Based</h3>
+                        <p>Our protein is derived from premium pea, rice, and hemp sources, providing a complete amino
+                            acid profile without any animal products.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Heart Healthy</h3>
+                        <p>Naturally cholesterol-free and low in saturated fat to support cardiovascular health and
+                            maintain healthy blood pressure levels.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Easy Digestion</h3>
+                        <p>Contains digestive enzymes to prevent bloating and discomfort common with other protein
+                            sources like whey or soy.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Sustained Energy</h3>
+                        <p>Provides slow-release energy without spikes or crashes, keeping you fueled throughout your
+                            day.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Plant-based proteins require significantly less water and land resources compared to
+                            animal-based proteins.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Clean Ingredients</h3>
+                        <p>Free from artificial sweeteners, colors, and preservatives. Sweetened naturally with organic
+                            stevia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="mb-3">Real Results From Our Community</h2>
+                <p class="text-muted">Hear what people say about PureFuel</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "After switching to PureFuel, my digestion improved dramatically. No more bloating after
+                            workouts and I recover faster than ever."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah J.</h6>
+                                <small class="text-muted">Fitness Trainer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "The chocolate flavor tastes amazing and mixes so well. I've tried many plant proteins and
+                            this is by far the best texture."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Michael T.</h6>
+                                <small class="text-muted">Marathon Runner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "As a vegan athlete, finding a complete protein source was challenging. PureFuel gives me
+                            all the amino acids I need without compromise."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica L.">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Jessica L.</h6>
+                                <small class="text-muted">Professional Cyclist</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="mb-4">Ready to Experience the Benefits?</h2>
+                    <p class="mb-5">Join thousands of satisfied customers who have transformed their nutrition with
+                        PureFuel.</p>
+                    <a href="#products" class="btn btn-primary btn-lg px-5">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-3">PureFuel</h3>
+                    <p>Clean protein for optimal performance and recovery.</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Shop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">All Products</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Best Sellers</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">New Arrivals</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Bundles</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">About</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Our Story</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Ingredients</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sustainability</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Contact</h5>
+                    <p>123 Wellness Way<br>San Francisco, CA 94107</p>
+                    <p>hello@purefuel.com<br>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="text-center pt-4 mt-4 border-top border-white border-opacity-10">
+                <p class="small">© 2023 PureFuel Protein. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
